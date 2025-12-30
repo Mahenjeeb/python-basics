@@ -15,3 +15,6 @@ print(f"{round(z)}")
 print(f"{round(z,2)}")
 # short-hand to keep number upto 2 decimal places
 print(f"{(z):.2f}")
+
+pow()
+sum()
