@@ -3,5 +3,5 @@ def main():
     hello(name)
 # Passing default parameter to a function
 def hello(to="World"):
-    print(f"Hello, {to}")
+    print(f"Hello, {to} 😊")
 main()

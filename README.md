@@ -38,7 +38,7 @@ print(f"{x} divided by {y} = {x / y}")
 ## Built-in functions
 **Python** provides several built-in mathematical functions that are integral to the language and do not require importing additional modules
 ### Mathmetical Operations
-#### round(_number_, _ndigits_)
+>#### round(_number_, _ndigits_)
 Round a number to a given precision in decimal digits.
 
 Takes two parameters
@@ -52,7 +52,7 @@ print(f"{round(6/7)}")
 print(f"{round(z,2)}")
 # 0.86
 ```
-#### pow(_base, exp, mod_)
+>#### pow(_base, exp, mod_)
 To calculate a power of given number
 
 Takes three parameters
@@ -65,7 +65,7 @@ Returns single value as a **_integer_**
 pow(4,2) # 4 to the power 2 is 16
 pow(3,3) # 3 to the power 3 is 27
 ```
-#### sum(_iterable, start_)
+>#### sum(_iterable, start_)
 To Calculate sum of numberic values in an array
 
 Takes two parameters
@@ -80,3 +80,49 @@ Other mathmatical functions are follows
 ```code
 min(iter), max(iter), abs(x), divmod(a/b)
 ```
+## User defined functions
+Python **functions** are reusable block of statements that does a specific tasks. Helps in code resusability, modularity, redability and maintainability.
+
+>#### Function Defination
+Python functions are created using **_def_** keyword.
+```python
+def main():
+    print("I am a user defined function")
+```
+>#### Function Call
+Functions are called using their name enclosed with right and left paranthesis **_'()'_**
+
+```python
+main()
+```
+## Parameterized Function
+A **_parameterized_** function in Python is a function where one or more details of its behavior are defined as parameters rather than being hardcoded within the function itself
+
+```python
+def main():
+    name = input("Enter your name ")
+    hello(name)
+def hello(to):
+    print(f"Hello, {name} 😊")
+main()
+```
+on above code _'to'_ is a parameter to _'hello()'_ function and we passed _'name' _as and argument to '_hello()_' inside _'main()'_
+
+**Note :**
+ >_Parameter_ are variables defined in a function or method's declaration
+ _Arguments_ are the concrete data supplied during a function call 
+
+#### Default parameter
+In Python, a parameterized function with _**default**_ parameters allows you to define functions where certain arguments have predefined values. This means that if a caller does not provide a value for a parameter, the _**default**_ value is used instead.
+
+```python
+def main():
+    name = input("Enter your name ")
+    hello() #Prints "Hello, World 😊"
+    hello(name)
+def hello(to = "World"):
+    print(f"Hello, {to} 😊")
+main()
+```
+Here '_to = "World"_' is a default parameter to _'hello()'_.
+When user does not provide any parmeter then _'Hello, World 😊'_ will be printed.
