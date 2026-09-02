@@ -510,3 +510,26 @@ for i in range(5):
 3
 4
 ```
+### Repeating Code Multiple Ways
+
+**Definition:** Python provides multiple approaches to repeat code a specific number of times. Choose the method that best fits your use case and improves code readability.
+
+**Example 1 - Using a for loop with range():**
+```python
+for _ in range(3):
+    print("Hey")
+```
+
+**Example 2 - Using string multiplication:**
+```python
+print("Hey\n" * 3, end='')
+```
+
+**Output (both examples):**
+```
+Hey
+Hey
+Hey
+```
+
+**Note:** The underscore `_` is used as a variable name when you don't need to use the loop variable. The string multiplication approach `"Hey\n" * 3` repeats the string 3 times, where `\n` creates a newline after each repetition.
