@@ -1,4 +1,5 @@
-import os , sys, json, calendar, random, datetime
+import os , sys, json, calendar, random
+from datetime import datetime
 
 ######
 # os #
@@ -73,4 +74,31 @@ print(JSONtoObject)
 cal_month = calendar.monthcalendar(2016, 9)
 print(cal_month)
 
+############
+# datetime #
+############
 
+now = datetime.now()
+print(now)
+# print(datetime.time())
+print(datetime.max, datetime.min)
+# String Format Time
+strfTime = now.strftime("%Y-%m-%d, %H:%M:%S")
+print(strfTime)
+# String Parse Time
+strPTime = datetime.strptime('2026-09-10', '%Y-%m-%d')
+print(strPTime)
+print(f"{now.hour}:{now.minute}")
+print(datetime.isocalendar(now))
+print(datetime.today())
+print(datetime.weekday(now))
+
+##########
+# random #
+##########
+
+print(random.choices(['Rock', 'Paper', 'Scissor']))
+# shuffleNumbers = random.shuffle([10,7,12,7,0,3,4,5])
+# print(shuffleNumbers)
+print(random.getrandbits(10))
+print(random.randint(1,10))
