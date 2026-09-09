@@ -27,3 +27,32 @@ print(list(map(lambda x:x ** 2, numList)))
 nmAgeList = [{"name": "Mahenjeeb", "age": 18}, {"name": "Peti", "age": 54}, {"name": "tinga bapa", "age": 56}]
 filNmAgeList = list(filter(lambda nmDict: nmDict["age"] > 50, nmAgeList))
 print(filNmAgeList)
+
+# Global and Local Scope
+# Example 01
+name = "Mahenjeeb" # Gloabal Scope
+def printName():
+    # Local Scope
+    name = "Peta"
+    def nmP() :
+        # Non Local Scope
+        nonlocal name 
+        name = "Guduly"
+        return name
+    nmP()
+    return name
+print(printName())
+
+# Example 02
+name2 = "Lata"
+def printName02():
+    #  Local Scope
+    name2 = "Peti"
+    def pNam():
+        # Local Scope
+        global name2
+        name2 = "Kanduri"
+        return name2
+    return pNam()
+printName02()
+print(name2)  # Kanduri
